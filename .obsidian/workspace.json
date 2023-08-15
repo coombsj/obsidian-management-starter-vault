@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Team Member Full Name/Team Member Full Name.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": true
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Team Member Full Name/Team Member Full Name.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Team Member Full Name/Team Member Full Name.md"
               }
             }
           },
@@ -154,5 +154,7 @@
     }
   },
   "active": "610cc5b77b9cb1c4",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "README.md"
+  ]
 }
