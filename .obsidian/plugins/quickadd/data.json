@@ -14,15 +14,27 @@
       "id": "56cb8374-d898-4c27-9e02-f6de6cf62004",
       "commands": [
         {
-          "name": "Base Member Template",
+          "name": "teamnamequickadd",
+          "type": "UserScript",
+          "id": "e3f8e4fa-676e-4993-9869-f2992138e108",
+          "path": "system/quickadd/scripts/teamnamequickadd.js",
+          "settings": {
+            "Text field": "",
+            "Checkbox": false,
+            "Dropdown": "Option 1",
+            "Format": "{{DATE:YYYY-MM-DD}}"
+          }
+        },
+        {
+          "name": "Team Member",
           "type": "NestedChoice",
-          "id": "b9f154d2-8eca-460b-98ca-4afb01d805d8",
+          "id": "7265aa66-e484-4a97-aec2-f8e9674e4447",
           "choice": {
-            "id": "85659e70-6ed2-4e20-b034-fc9862086741",
-            "name": "Base Member Template",
+            "id": "5abd448d-84d1-4b47-94a6-712e071bb81d",
+            "name": "Team Member",
             "type": "Template",
             "command": false,
-            "templatePath": "system/templates/Team Member Home.md",
+            "templatePath": "system/quickadd/templates/Team Member Quick Add Template.md",
             "fileNameFormat": {
               "enabled": false,
               "format": ""
@@ -40,10 +52,10 @@
               "direction": "vertical",
               "focus": true
             },
-            "openFile": true,
+            "openFile": false,
             "openFileInMode": "default",
-            "fileExistsMode": "Nothing",
-            "setFileExistsBehavior": true
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
           }
         }
       ],
@@ -52,7 +64,7 @@
   ],
   "inputPrompt": "single-line",
   "devMode": false,
-  "templateFolderPath": "system/templates",
+  "templateFolderPath": "system/quickadd/templates",
   "announceUpdates": true,
   "version": "1.2.1",
   "disableOnlineFeatures": true,

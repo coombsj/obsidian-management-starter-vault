@@ -13,10 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "system/templates/dataview/Professional Note Dataview.md",
+                "file": "system/quickadd/templates/Team Member Quick Add Template.md",
                 "mode": "source",
                 "backlinks": false,
-                "source": true
+                "source": false
               }
             }
           }
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "system/templates/dataview/Professional Note Dataview.md",
+                "file": "system/quickadd/templates/Team Member Quick Add Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "system/templates/dataview/Professional Note Dataview.md"
+                "file": "system/quickadd/templates/Team Member Quick Add Template.md"
               }
             }
           },
@@ -155,7 +155,15 @@
   },
   "active": "610cc5b77b9cb1c4",
   "lastOpenFiles": [
+    "system/quickadd/scripts/teamname.md",
+    "system/quickadd/scripts/teamnamequickadd.js",
+    "system/quickadd/scripts/Untitled 1.md",
+    "system/quickadd/templates/Team Member Quick Add Template.md",
+    "system/quickadd/scripts",
     "system/templates/Team Member Home.md",
+    "system/templates/dataview/Professional Note Dataview.md",
+    "system/quickadd/templates",
+    "system/quickadd",
     "README.md",
     "Team Member Full Name/Team Member Full Name.md"
   ]
