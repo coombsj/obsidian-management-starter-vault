@@ -4,6 +4,8 @@
 
 ---
 
+Team Member Home Template, update the baseFolder value to a location you want to store team member profiles and information.
+
 ## Table of Contents
 
 1. [Setup](#setup)

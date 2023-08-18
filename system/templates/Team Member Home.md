@@ -1,6 +1,9 @@
 <%*
 let teamMemberName = await tp.user.team_member_selection(tp);
 await tp.file.rename(teamMemberName)
+let baseFolder = "/" 
+let newFolder = `${baseFolder}${teamMemberName}/` 
+await tp.file.move(newFolder + teamMemberName);
 -%>
 <%"---"%>
 aliases: 
