@@ -16,5 +16,5 @@ description includes <% teamMemberName %>
 ```
 
 - >[!example]  [one-on-one::[[<% teamMemberName %>/<% teamMemberName %>|<% teamMemberName %>]]] 
-> \[year::"<% tp.date.now("YYYY") %>"] [quarter::"<% tp.date.now("Q") %>"]
+> \[year::"<% tp.date.now("YYYY") %>"] [quarter::"<% tp.date.now("Q") %>"] [week::"<% tp.date.now("W")"]
 > <% tp.file.cursor() %>

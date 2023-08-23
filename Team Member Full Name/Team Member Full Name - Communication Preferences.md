@@ -1,18 +1,11 @@
-<%*
-let teamMemberName = await tp.user.team_member_selection(tp);
-await tp.file.rename(teamMemberName+" - Communication Preferences")
-let baseFolder = "/" 
-let newFolder = `${baseFolder}${teamMemberName}/` 
-await tp.file.move(newFolder + teamMemberName);
--%>
-<%"---"%>
+---
 aliases:
  - Communication Preferences
 status: In Progress
 tags: 
- - <% teamMemberName.replace(' ', '') %>
+ - TeamMember Full Name
  - communication-preferences
-<%"---"%>
+---
 
 ## Communication Preferences
 
