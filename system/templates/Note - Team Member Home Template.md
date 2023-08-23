@@ -14,20 +14,19 @@ tags:
 # <% teamMemberName %>
 
 ## Contact Info
-☎️: 
-🏠: 
 
-Profiles:
-- Atlassian Profile
-- Github Profile
-- Workday Profile
 
 ## Communication Preferences
 
 ## Career Path
 
 ## Professional Notes
-<% tp.file.include("[[Dataview - Professional Note]]") %>
+```dataview
+LIST WITHOUT ID L.text
+FLATTEN file.lists AS L
+WHERE contains(L.professional-note, [[<% teamMemberName %>/<% teamMemberName %>|<% teamMemberName %>]])
+SORT L.week ASC
+```
 
 ### Highlights
 ```dataview
@@ -57,7 +56,7 @@ SORT L.week ASC
 
 ## One on Ones
 ```dataview
-LIST WITHOUT ID L.text
+LIST L.text
 FLATTEN file.lists AS L
 WHERE contains(L.one-on-one, [[<% teamMemberName %>/<% teamMemberName %>|<% teamMemberName %>]])
 SORT L.week ASC
