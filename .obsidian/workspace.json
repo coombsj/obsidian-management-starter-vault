@@ -26,7 +26,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "system/templates/periodic/Periodic - Daily Note Template.md",
+                "file": "README.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -116,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "system/templates/periodic/Periodic - Daily Note Template.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "system/templates/periodic/Periodic - Daily Note Template.md"
+                "file": "README.md"
               }
             }
           },
@@ -167,11 +167,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "26caf15237c46aa4",
+  "active": "2949097271998301",
   "lastOpenFiles": [
     "system/templates/periodic/Periodic - Weekly Note Template.md",
-    "system/templates/periodic",
+    "Test",
     "system/templates/periodic/Periodic - Daily Note Template.md",
+    "system/templates/periodic",
     "system/templates/dataview/Dataview - Talent Development.md",
     "system/templates/dataview/Dataview - Professional Note.md",
     "system/templates/dataview/Dataview - Personal Note.md",
