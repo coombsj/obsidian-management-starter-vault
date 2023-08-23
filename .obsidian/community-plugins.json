@@ -9,5 +9,7 @@
   "calendar",
   "obsidian-emoji-toolbar",
   "obsidian-git",
-  "obsidian-plaintext"
+  "obsidian-plaintext",
+  "obsidian-linter",
+  "hotkey-helper"
 ]

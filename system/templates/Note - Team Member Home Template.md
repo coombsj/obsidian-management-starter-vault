@@ -4,19 +4,27 @@ await tp.file.rename(teamMemberName)
 let baseFolder = "/" 
 let newFolder = `${baseFolder}${teamMemberName}/` 
 await tp.file.move(newFolder + teamMemberName);
+
+let communicationPrefFileName = teamMemberName+" - Communication Preferences";
+if (!tp.file.exists(communicationPrefFileName)) {
+	await tp.file.create_new(tp.file.find_tfile("Note - Communication Preferences Template"), communicationPrefFileName)
+}
 -%>
 <%"---"%>
 aliases: 
  - <% teamMemberName.split(' ')[0] %>
 tags: 
- - <% teamMemberName.replace(' ', '') %>
+ - <% teamMemberName.replace(/\s+/g, '') %>
 <%"---"%>
 # <% teamMemberName %>
 
 ## Contact Info
 
+<% tp.file.include("[[Section - Team Member Contact Info]]") %>
 
 ## Communication Preferences
+
+![[<% communicationPrefFileName %>]]
 
 ## Career Path
 
@@ -56,7 +64,7 @@ SORT L.week ASC
 
 ## One on Ones
 ```dataview
-LIST L.text
+LIST WITHOUT ID L.text
 FLATTEN file.lists AS L
 WHERE contains(L.one-on-one, [[<% teamMemberName %>/<% teamMemberName %>|<% teamMemberName %>]])
 SORT L.week ASC

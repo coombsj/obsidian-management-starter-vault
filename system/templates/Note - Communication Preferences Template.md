@@ -10,7 +10,7 @@ aliases:
  - Communication Preferences
 status: In Progress
 tags: 
- - <% teamMemberName.replace(' ', '') %>
+ - <% teamMemberName.replace(/\s+/g, '') %>
  - communication-preferences
 <%"---"%>
 

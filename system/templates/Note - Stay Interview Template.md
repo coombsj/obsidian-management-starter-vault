@@ -10,7 +10,7 @@ aliases:
  - <% tp.date.now("YYYY - [Q]Q") %> Stay Interview
 status: In Progress
 tags: 
- - <% teamMemberName.replace(" ", "") %>
+ - <% teamMemberName.replace(/\s+/g, '') %>
  - stay-interview
  - <% tp.date.now("YYYY/[Q]Q") %>
 <%"---"%>
