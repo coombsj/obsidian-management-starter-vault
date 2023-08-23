@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "system/quickadd/templates/Team Member Quick Add Template.md",
+                "file": "system/templates/Periodic - Daily Note Template.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "system/quickadd/templates/Team Member Quick Add Template.md",
+                "file": "system/templates/Periodic - Daily Note Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "system/quickadd/templates/Team Member Quick Add Template.md"
+                "file": "system/templates/Periodic - Daily Note Template.md"
               }
             }
           },
@@ -155,15 +155,28 @@
   },
   "active": "610cc5b77b9cb1c4",
   "lastOpenFiles": [
+    "system/templates/dataview/Dataview - Talent Development.md",
+    "system/templates/dataview/Dataview - Professional Note.md",
+    "system/templates/dataview/Dataview - Personal Note.md",
+    "system/templates/dataview/Dataview - One on One.md",
+    "system/templates/dataview/Dataview - Highlight.md",
+    "system/templates/dataview/Dataview - Demo.md",
+    "system/templates/dataview/Dataview - Challenges.md",
+    "system/templates/callouts/Callout - Talent Development.md",
+    "system/templates/callouts/Callout - Professional Note.md",
+    "system/templates/callouts/Callout - Personal Note.md",
+    "system/templates/callouts/Callout - Highlight.md",
+    "system/templates/callouts/Callout - Follow-up.md",
+    "system/templates/callouts/Callout - Demo.md",
+    "system/templates/callouts/Callout - Challenge.md",
+    "system/quickadd/templates/Team Member Quick Add Template.md",
     "Why is this asking for Team Member?.md",
     "Someone.md",
-    "system/quickadd/templates/Team Member Quick Add Template.md",
     "system/quickadd/scripts/teamname.md",
     "system/quickadd/scripts/teamnamequickadd.js",
     "system/quickadd/scripts/Untitled 1.md",
     "system/quickadd/scripts",
     "system/templates/Team Member Home.md",
-    "system/templates/dataview/Professional Note Dataview.md",
     "system/quickadd/templates",
     "system/quickadd",
     "README.md",

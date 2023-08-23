@@ -27,7 +27,7 @@ Profiles:
 ## Career Path
 
 ## Professional Notes
-<% tp.file.include("[[Professional Note Dataview]]") %>
+<% tp.file.include("[[Dataview - Professional Note]]") %>
 
 ### Highlights
 ```dataview
