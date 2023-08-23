@@ -13,14 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "system/templates/Periodic - Daily Note Template.md",
+                "file": "system/templates/periodic/Periodic - Daily Note Template.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2949097271998301",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "system/templates/periodic/Periodic - Daily Note Template.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "system/templates/Periodic - Daily Note Template.md",
+                "file": "system/templates/periodic/Periodic - Daily Note Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "system/templates/Periodic - Daily Note Template.md"
+                "file": "system/templates/periodic/Periodic - Daily Note Template.md"
               }
             }
           },
@@ -153,8 +167,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "610cc5b77b9cb1c4",
+  "active": "26caf15237c46aa4",
   "lastOpenFiles": [
+    "system/templates/periodic/Periodic - Weekly Note Template.md",
+    "system/templates/periodic",
+    "system/templates/periodic/Periodic - Daily Note Template.md",
     "system/templates/dataview/Dataview - Talent Development.md",
     "system/templates/dataview/Dataview - Professional Note.md",
     "system/templates/dataview/Dataview - Personal Note.md",
