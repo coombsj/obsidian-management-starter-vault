@@ -7,9 +7,11 @@
   "periodic-notes",
   "quickadd",
   "calendar",
-  "obsidian-emoji-toolbar",
   "obsidian-git",
   "obsidian-plaintext",
   "obsidian-linter",
-  "hotkey-helper"
+  "hotkey-helper",
+  "emoji-shortcodes",
+  "home-tab",
+  "homepage"
 ]
