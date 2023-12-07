@@ -25,5 +25,14 @@
       ],
       "key": "N"
     }
+  ],
+  "templater-obsidian:system/templates/Section - Team Member One on One.md": [
+    {
+      "modifiers": [
+        "Ctrl",
+        "Mod"
+      ],
+      "key": "O"
+    }
   ]
 }

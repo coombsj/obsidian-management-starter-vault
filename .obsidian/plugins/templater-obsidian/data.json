@@ -24,8 +24,9 @@
     }
   ],
   "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
   "enabled_templates_hotkeys": [
-    ""
+    "system/templates/Section - Team Member One on One.md"
   ],
   "startup_templates": [
     ""
