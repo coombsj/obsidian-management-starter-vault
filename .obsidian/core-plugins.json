@@ -2,6 +2,7 @@
   "file-explorer",
   "global-search",
   "switcher",
+  "backlink",
   "canvas",
   "outgoing-link",
   "tag-pane",
@@ -11,8 +12,7 @@
   "command-palette",
   "editor-status",
   "bookmarks",
+  "markdown-importer",
   "outline",
-  "word-count",
-  "file-recovery",
-  "sync"
+  "word-count"
 ]

@@ -3,7 +3,7 @@
   "global-search": true,
   "switcher": true,
   "graph": false,
-  "backlink": false,
+  "backlink": true,
   "canvas": true,
   "outgoing-link": true,
   "tag-pane": true,
@@ -15,7 +15,7 @@
   "slash-command": false,
   "editor-status": true,
   "bookmarks": true,
-  "markdown-importer": false,
+  "markdown-importer": true,
   "zk-prefixer": false,
   "random-note": false,
   "outline": true,
@@ -23,8 +23,8 @@
   "slides": false,
   "audio-recorder": false,
   "workspaces": false,
-  "file-recovery": true,
+  "file-recovery": false,
   "publish": false,
-  "sync": true,
+  "sync": false,
   "properties": true
 }

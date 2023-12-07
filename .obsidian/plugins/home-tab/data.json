@@ -14,7 +14,7 @@
   "fontWeight": 600,
   "maxResults": 5,
   "showStarredFiles": false,
-  "showRecentFiles": false,
+  "showRecentFiles": true,
   "maxRecentFiles": 5,
   "storeRecentFile": true,
   "showPath": true,
@@ -39,7 +39,7 @@
   "starredFileStore": [],
   "searchDelay": 0,
   "replaceNewTabs": true,
-  "newTabOnStart": false,
-  "closePreviousSessionTabs": false,
+  "newTabOnStart": true,
+  "closePreviousSessionTabs": true,
   "omnisearch": false
 }
