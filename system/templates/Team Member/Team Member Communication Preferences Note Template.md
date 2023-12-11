@@ -1,9 +1,7 @@
 <%*
 let teamMemberName = await tp.user.team_member_selection(tp);
-let fileName = teamMemberName+" - Communication Preferences"
-let baseFolder = "/" 
-let newFolder = `${baseFolder}${teamMemberName}/` 
-await tp.file.move(newFolder + fileName);
+let fileExtension = " - Communication Preferences"
+await tp.user.team_member_note_move(teamMemberName, "", fileExtension, tp);
 -%>
 <%"---"%>
 aliases:
