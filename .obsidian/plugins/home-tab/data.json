@@ -25,19 +25,23 @@
   "recentFilesStore": [
     {
       "filepath": "Test/Test Data.md",
-      "timestamp": 1702329010835
+      "timestamp": 1702331289472
     },
     {
       "filepath": "Home.md",
-      "timestamp": 1702329008116
+      "timestamp": 1702331207482
     },
     {
-      "filepath": "Team Members/Team/Team Member Full Name/Team Member Full Name - Career Path.md",
-      "timestamp": 1701978571992
+      "filepath": "Test/Data View Tests.md",
+      "timestamp": 1702329442074
     },
     {
-      "filepath": "system/scripts/team_member_note_move.js",
-      "timestamp": 1701978247639
+      "filepath": "Test/Content.md",
+      "timestamp": 1702329440398
+    },
+    {
+      "filepath": "Test/References.md",
+      "timestamp": 1702329436774
     }
   ],
   "starredFileStore": [],
