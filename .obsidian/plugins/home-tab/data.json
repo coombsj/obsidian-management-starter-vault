@@ -24,24 +24,12 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
-      "filepath": "Test/Test Data.md",
-      "timestamp": 1702331289472
+      "filepath": "README.md",
+      "timestamp": 1717209842856
     },
     {
       "filepath": "Home.md",
-      "timestamp": 1702331207482
-    },
-    {
-      "filepath": "Test/Data View Tests.md",
-      "timestamp": 1702329442074
-    },
-    {
-      "filepath": "Test/Content.md",
-      "timestamp": 1702329440398
-    },
-    {
-      "filepath": "Test/References.md",
-      "timestamp": 1702329436774
+      "timestamp": 1717209840991
     }
   ],
   "starredFileStore": [],
