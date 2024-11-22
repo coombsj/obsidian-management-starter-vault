@@ -24,6 +24,10 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
+      "filepath": "Team Members/Team Member Selection Options.md",
+      "timestamp": 1732291945855
+    },
+    {
       "filepath": "system/templates/Team Member/Team Member Home  Note Template.md",
       "timestamp": 1731992081121
     },
@@ -38,10 +42,6 @@
     {
       "filepath": "system/scripts/team_member_selection.js",
       "timestamp": 1731991954049
-    },
-    {
-      "filepath": "Team Members/Team Member Selection Options.md",
-      "timestamp": 1731991870637
     }
   ],
   "bookmarkedFileStore": [],
