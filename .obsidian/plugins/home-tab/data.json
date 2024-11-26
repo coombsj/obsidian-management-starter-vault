@@ -24,24 +24,12 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
-      "filepath": "Untitled.md",
-      "timestamp": 1732310225416
+      "filepath": "Home.md",
+      "timestamp": 1732636528645
     },
     {
-      "filepath": "_system/Team Member Selection Options.md",
-      "timestamp": 1732291945855
-    },
-    {
-      "filepath": "_system/templates/Team Member/Team Member Home  Note Template.md",
-      "timestamp": 1731992081121
-    },
-    {
-      "filepath": "README.md",
-      "timestamp": 1731992059333
-    },
-    {
-      "filepath": "_system/scripts/team_member_note_move.js",
-      "timestamp": 1731992005902
+      "filepath": "_system/README.md",
+      "timestamp": 1732636527893
     }
   ],
   "bookmarkedFileStore": [],
