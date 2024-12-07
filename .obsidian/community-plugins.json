@@ -5,17 +5,14 @@
   "obsidian-tasks-plugin",
   "obsidian-admonition",
   "periodic-notes",
-  "quickadd",
   "calendar",
   "obsidian-git",
   "obsidian-plaintext",
   "obsidian-linter",
   "hotkey-helper",
-  "emoji-shortcodes",
   "home-tab",
   "homepage",
   "obsidian-minimal-settings",
   "obsidian-style-settings",
-  "creases",
-  "omnisearch"
+  "creases"
 ]
