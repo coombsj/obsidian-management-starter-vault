@@ -1,0 +1,7 @@
+- Challenge|challenge
+- Demo|demo
+- Follow Up|follow-up
+- Highlight|highlight
+- Personal Note|personal-note
+- Professional Note|professional-note
+- Talent Development|talent-development

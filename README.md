@@ -2,6 +2,8 @@
 
 ***Organize your teams: An Obsidian starter vault for managers, support for one on ones and periodic reports***
 
+## Setup
+1. Modify [[Callout Focus Selection Options]] to include the people and teams you want to 
 ---
 
 Team Member Home Template, update the baseFolder value to a location you want to store team member profiles and information.

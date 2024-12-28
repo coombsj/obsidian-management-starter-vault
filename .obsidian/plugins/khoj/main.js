@@ -1929,16 +1929,16 @@ var KhojChatView = class extends KhojPaneView {
   }
   markdownTextToSanitizedHtml(markdownText, component) {
     let virtualChatMessageBodyTextEl = document.createElement("div");
-    import_obsidian5.MarkdownRenderer.renderMarkdown(markdownText, virtualChatMessageBodyTextEl, "", component);
+    import_obsidian5.MarkdownRenderer.render(this.app, markdownText, virtualChatMessageBodyTextEl, "", component);
     virtualChatMessageBodyTextEl.innerHTML = virtualChatMessageBodyTextEl.innerHTML.replace(/<img(?:(?!src=["'](app:|data:|https:\/\/generated\.khoj\.dev)).)*?>/gis, "");
     return DOMPurify.sanitize(virtualChatMessageBodyTextEl.innerHTML);
   }
-  renderMessageWithReferences(chatEl, message, sender, context, onlineContext, dt, intentType, inferredQueries, conversationId) {
+  renderMessageWithReferences(chatEl, message, sender, context, onlineContext, dt, intentType, inferredQueries, conversationId, images, excalidrawDiagram) {
     if (!message)
       return;
     let chatMessageEl;
-    if ((intentType == null ? void 0 : intentType.includes("text-to-image")) || intentType === "excalidraw") {
-      let imageMarkdown = this.generateImageMarkdown(message, intentType, inferredQueries, conversationId);
+    if ((intentType == null ? void 0 : intentType.includes("text-to-image")) || intentType === "excalidraw" || images && images.length > 0 || excalidrawDiagram) {
+      let imageMarkdown = this.generateImageMarkdown(message, intentType != null ? intentType : "", inferredQueries, conversationId, images, excalidrawDiagram);
       chatMessageEl = this.renderMessage(chatEl, imageMarkdown, sender, dt);
     } else {
       chatMessageEl = this.renderMessage(chatEl, message, sender, dt);
@@ -1954,7 +1954,7 @@ var KhojChatView = class extends KhojPaneView {
     let chatMessageBodyEl = chatMessageEl.getElementsByClassName("khoj-chat-message-text")[0];
     chatMessageBodyEl.appendChild(this.createReferenceSection(references));
   }
-  generateImageMarkdown(message, intentType, inferredQueries, conversationId) {
+  generateImageMarkdown(message, intentType, inferredQueries, conversationId, images, excalidrawDiagram) {
     let imageMarkdown = "";
     if (intentType === "text-to-image") {
       imageMarkdown = `![](data:image/png;base64,${message})`;
@@ -1962,12 +1962,25 @@ var KhojChatView = class extends KhojPaneView {
       imageMarkdown = `![](${message})`;
     } else if (intentType === "text-to-image-v3") {
       imageMarkdown = `![](data:image/webp;base64,${message})`;
-    } else if (intentType === "excalidraw") {
+    } else if (intentType === "excalidraw" || excalidrawDiagram) {
       const domain = this.setting.khojUrl.endsWith("/") ? this.setting.khojUrl : `${this.setting.khojUrl}/`;
       const redirectMessage = `Hey, I'm not ready to show you diagrams yet here. But you can view it in ${domain}chat?conversationId=${conversationId}`;
       imageMarkdown = redirectMessage;
+    } else if (images && images.length > 0) {
+      for (let image of images) {
+        if (image.startsWith("https://")) {
+          imageMarkdown += `![](${image})
+
+`;
+        } else {
+          imageMarkdown += `![](data:image/png;base64,${image})
+
+`;
+        }
+      }
+      imageMarkdown += `${message}`;
     }
-    if (inferredQueries) {
+    if ((images == null ? void 0 : images.length) === 0 && inferredQueries) {
       imageMarkdown += "\n\n**Inferred Query**:";
       for (let inferredQuery of inferredQueries) {
         imageMarkdown += `
@@ -1979,10 +1992,9 @@ ${inferredQuery}`;
   }
   renderMessage(chatBodyEl, message, sender, dt, raw = false, willReplace = true) {
     let message_time = this.formatDate(dt != null ? dt : new Date());
-    let emojified_sender = sender == "khoj" ? "\u{1F3EE} Khoj" : "\u{1F914} You";
     let chatMessageEl = chatBodyEl.createDiv({
       attr: {
-        "data-meta": `${emojified_sender} at ${message_time}`,
+        "data-meta": message_time,
         class: `khoj-chat-message ${sender}`
       }
     });
@@ -2007,7 +2019,7 @@ ${inferredQuery}`;
     let chatBodyEl = this.contentEl.getElementsByClassName("khoj-chat-body")[0];
     let chatMessageEl = chatBodyEl.createDiv({
       attr: {
-        "data-meta": `\u{1F3EE} Khoj at ${messageTime}`,
+        "data-meta": messageTime,
         class: `khoj-chat-message khoj`
       }
     });
@@ -2076,7 +2088,7 @@ ${inferredQuery}`;
       return this.getChatHistory(chatBodyEl);
     }
     chatBodyEl.innerHTML = "";
-    const sidePanelEl = this.contentEl.createDiv("side-panel");
+    const sidePanelEl = chatBodyEl.createDiv("side-panel");
     const newConversationEl = sidePanelEl.createDiv("new-conversation");
     const conversationHeaderTitleEl = newConversationEl.createDiv("conversation-header-title");
     conversationHeaderTitleEl.textContent = "Conversations";
@@ -2120,7 +2132,6 @@ ${inferredQuery}`;
           conversationMenuEl = this.addConversationMenu(conversationMenuEl, conversationSessionEl, conversationTitle, conversationSessionTitleEl, chatBodyEl, incomingConversationId, incomingConversationId == conversationId);
           conversationSessionEl.appendChild(conversationMenuEl);
           conversationListBodyEl.appendChild(conversationSessionEl);
-          chatBodyEl.appendChild(sidePanelEl);
         }
       }
     } catch (err) {
@@ -2235,7 +2246,7 @@ ${inferredQuery}`;
         let chatLogs = ((_a = responseJson.response) == null ? void 0 : _a.conversation_id) ? (_b = responseJson.response.chat) != null ? _b : [] : responseJson.response;
         chatLogs.forEach((chatLog) => {
           var _a2, _b2, _c;
-          this.renderMessageWithReferences(chatBodyEl, chatLog.message, chatLog.by, chatLog.context, chatLog.onlineContext, new Date(chatLog.created), (_a2 = chatLog.intent) == null ? void 0 : _a2.type, (_b2 = chatLog.intent) == null ? void 0 : _b2["inferred-queries"], (_c = chatBodyEl.dataset.conversationId) != null ? _c : "");
+          this.renderMessageWithReferences(chatBodyEl, chatLog.message, chatLog.by, chatLog.context, chatLog.onlineContext, new Date(chatLog.created), (_a2 = chatLog.intent) == null ? void 0 : _a2.type, (_b2 = chatLog.intent) == null ? void 0 : _b2["inferred-queries"], (_c = chatBodyEl.dataset.conversationId) != null ? _c : "", chatLog.images, chatLog.excalidrawDiagram);
           if (chatLog.by === "you") {
             this.userMessages.push(chatLog.message);
           }
@@ -2279,6 +2290,11 @@ ${inferredQuery}`;
       console.log(`status: ${chunk.data}`);
       const statusMessage = chunk.data;
       this.handleStreamResponse(this.chatMessageState.newResponseTextEl, statusMessage, this.chatMessageState.loadingEllipsis, false);
+    } else if (chunk.type === "generated_assets") {
+      const generatedAssets = chunk.data;
+      const imageData = this.handleImageResponse(generatedAssets, this.chatMessageState.rawResponse);
+      this.chatMessageState.generatedAssets = imageData;
+      this.handleStreamResponse(this.chatMessageState.newResponseTextEl, imageData, this.chatMessageState.loadingEllipsis, false);
     } else if (chunk.type === "start_llm_response") {
       console.log("Started streaming", new Date());
     } else if (chunk.type === "end_llm_response") {
@@ -2295,7 +2311,8 @@ ${inferredQuery}`;
         references: {},
         rawResponse: "",
         rawQuery: liveQuery,
-        isVoice: false
+        isVoice: false,
+        generatedAssets: ""
       };
     } else if (chunk.type === "references") {
       this.chatMessageState.references = { "notes": chunk.data.context, "online": chunk.data.onlineContext };
@@ -2309,16 +2326,16 @@ ${inferredQuery}`;
           this.handleJsonResponse(jsonData);
         } catch (e) {
           this.chatMessageState.rawResponse += chunkData;
-          this.handleStreamResponse(this.chatMessageState.newResponseTextEl, this.chatMessageState.rawResponse, this.chatMessageState.loadingEllipsis);
+          this.handleStreamResponse(this.chatMessageState.newResponseTextEl, this.chatMessageState.rawResponse + this.chatMessageState.generatedAssets, this.chatMessageState.loadingEllipsis);
         }
       } else {
         this.chatMessageState.rawResponse += chunkData;
-        this.handleStreamResponse(this.chatMessageState.newResponseTextEl, this.chatMessageState.rawResponse, this.chatMessageState.loadingEllipsis);
+        this.handleStreamResponse(this.chatMessageState.newResponseTextEl, this.chatMessageState.rawResponse + this.chatMessageState.generatedAssets, this.chatMessageState.loadingEllipsis);
       }
     }
   }
   handleJsonResponse(jsonData) {
-    if (jsonData.image || jsonData.detail) {
+    if (jsonData.image || jsonData.detail || jsonData.images || jsonData.excalidrawDiagram) {
       this.chatMessageState.rawResponse = this.handleImageResponse(jsonData, this.chatMessageState.rawResponse);
     } else if (jsonData.response) {
       this.chatMessageState.rawResponse = jsonData.response;
@@ -2394,7 +2411,8 @@ ${inferredQuery}`;
       references: {},
       rawQuery: query,
       rawResponse: "",
-      isVoice
+      isVoice,
+      generatedAssets: ""
     };
     let response = await fetch(chatUrl, {
       method: "POST",
@@ -2631,6 +2649,22 @@ Content-Type: "application/octet-stream"\r
 
 ${inferredQuery}`;
       }
+    } else if (imageJson.images) {
+      imageJson.images.forEach((image) => {
+        if (image.startsWith("http")) {
+          rawResponse += `![generated_image](${image})
+
+`;
+        } else {
+          rawResponse += `![generated_image](data:image/png;base64,${image})
+
+`;
+        }
+      });
+    } else if (imageJson.excalidrawDiagram) {
+      const domain = this.setting.khojUrl.endsWith("/") ? this.setting.khojUrl : `${this.setting.khojUrl}/`;
+      const redirectMessage = `Hey, I'm not ready to show you diagrams yet here. But you can view it in ${domain}`;
+      rawResponse += redirectMessage;
     }
     if (imageJson.detail)
       rawResponse += imageJson.detail;
