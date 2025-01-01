@@ -24,24 +24,12 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
+      "filepath": "Home.md",
+      "timestamp": 1735745990843
+    },
+    {
       "filepath": "README.md",
-      "timestamp": 1735363683330
-    },
-    {
-      "filepath": "_system/scripts/build_info_callout.js",
-      "timestamp": 1735362224142
-    },
-    {
-      "filepath": "_system/scripts/info_callout.js",
-      "timestamp": 1735362214143
-    },
-    {
-      "filepath": "_system/scripts/callout_type_selection.js",
-      "timestamp": 1735362057167
-    },
-    {
-      "filepath": "_system/scripts/callout_focus_selection.js",
-      "timestamp": 1735361943204
+      "timestamp": 1735745990415
     }
   ],
   "bookmarkedFileStore": [],
