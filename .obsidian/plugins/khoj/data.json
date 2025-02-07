@@ -3,12 +3,12 @@
   "khojUrl": "https://app.khoj.dev",
   "khojApiKey": "kk-rpzpuolACIq-4qHjIYeSyTSQ5xM1QZt6OjkbOBSLCnA",
   "connectedToBackend": true,
-  "autoConfigure": true,
+  "autoConfigure": false,
   "lastSync": {},
   "syncFileType": {
-    "markdown": true,
-    "images": true,
-    "pdf": true
+    "markdown": false,
+    "images": false,
+    "pdf": false
   },
   "userInfo": {
     "email": "coombsjatwork@gmail.com",
