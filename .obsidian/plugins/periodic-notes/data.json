@@ -4,15 +4,15 @@
   "hasMigratedWeeklyNoteSettings": false,
   "daily": {
     "format": "",
-    "template": "system/templates/periodic/Periodic - Daily Note Template.md",
-    "folder": "Journal/Daily Notes",
+    "template": "Resources/Templates/periodic/Daily Note Template.md",
+    "folder": "Areas/Journal/Daily Notes",
     "enabled": true
   },
   "weekly": {
     "format": "",
-    "template": "system/templates/periodic/Periodic - Weekly Note Template.md",
-    "folder": "Journal/Weekly Notes",
-    "enabled": true
+    "template": "Resources/Templates/periodic/Weekly Note Template.md",
+    "folder": "Areas/Journal/Weekly Notes",
+    "enabled": false
   },
   "monthly": {
     "format": "",

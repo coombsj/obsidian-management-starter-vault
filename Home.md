@@ -7,3 +7,33 @@ Want to be able to leverage AI to analyze a year end report (from template) and 
 Looks like I may need to find a way to localize which files are being used when interacting with Khoj, as it has context of my other vault for EPSM as well.
 
 https://www.linkedin.com/pulse/hr-guide-managing-talent-succession-planning-using-9-box-aribisala/
+
+### Areas/
+- Professional-Development/ (consolidate career content here)
+  - Career-Planning/
+  - Performance-Reviews/
+  - Skills-Development/
+- Team-Management/ (consolidate team content here)
+  - Team-Gaea/
+  - Team-Hermes/
+  - One-on-Ones/
+- Technical-Excellence/
+  - Architecture/
+  - Standards/
+  - Best-Practices/
+- Communities-of-Practice/
+- Personal-Development/
+  - PKM/
+  - Daily-Routines/
+
+### Resources/
+- Templates/ (move from _system/templates/)
+- Reference-Materials/
+- Documentation/
+- Memory-Bank/ (keep as-is)
+- Knowledge-Base/
+
+### Archive/
+- Projects/
+- Areas/
+- Resources/

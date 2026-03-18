@@ -1,6 +1,6 @@
 {
   "command_timeout": 5,
-  "templates_folder": "_system/templates",
+  "templates_folder": "Resources/Templates",
   "templates_pairs": [
     [
       "",
@@ -11,7 +11,7 @@
   "auto_jump_to_cursor": true,
   "enable_system_commands": false,
   "shell_path": "",
-  "user_scripts_folder": "_system/scripts",
+  "user_scripts_folder": "Resources/scripts",
   "enable_folder_templates": true,
   "folder_templates": [
     {
@@ -38,5 +38,6 @@
   "startup_templates": [
     ""
   ],
+  "intellisense_render": 1,
   "enable_ribbon_icon": true
 }

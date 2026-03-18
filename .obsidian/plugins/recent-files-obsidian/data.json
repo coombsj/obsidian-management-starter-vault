@@ -1,0 +1,40 @@
+{
+  "recentFiles": [
+    {
+      "basename": "_about_",
+      "path": "Areas/Communities-of-Practice/_about_.md"
+    },
+    {
+      "basename": "_about_",
+      "path": "Archive/Resources/_about_.md"
+    },
+    {
+      "basename": "_about_",
+      "path": "Archive/Projects/_about_.md"
+    },
+    {
+      "basename": "_about_",
+      "path": "Archive/Areas/_about_.md"
+    },
+    {
+      "basename": "Team Member Selection Options",
+      "path": "Resources/Team Member Selection Options.md"
+    },
+    {
+      "basename": "README",
+      "path": "Resources/README.md"
+    },
+    {
+      "basename": "callout - Action Item Template",
+      "path": "Archive/Resources/callout - Action Item Template.md"
+    },
+    {
+      "basename": "Home",
+      "path": "Home.md"
+    }
+  ],
+  "omittedPaths": [],
+  "omittedTags": [],
+  "updateOn": "file-open",
+  "omitBookmarks": false
+}

@@ -24,8 +24,24 @@
   "unresolvedLinks": false,
   "recentFilesStore": [
     {
-      "filepath": "Home.md",
-      "timestamp": 1738918328078
+      "filepath": "Areas/Communities-of-Practice/_about_.md",
+      "timestamp": 1752076511148
+    },
+    {
+      "filepath": "Archive/Resources/_about_.md",
+      "timestamp": 1752076499651
+    },
+    {
+      "filepath": "Archive/Projects/_about_.md",
+      "timestamp": 1752076452276
+    },
+    {
+      "filepath": "Archive/Areas/_about_.md",
+      "timestamp": 1752076434616
+    },
+    {
+      "filepath": "Resources/Team Member Selection Options.md",
+      "timestamp": 1752076100333
     }
   ],
   "bookmarkedFileStore": [],
